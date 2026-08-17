@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>無料登録フォーム｜カイケツエージェント</title>
+<meta name="description" content="かんたん1分。フォームをご入力いただくと、キャリアアドバイザーよりご案内をさせていただきます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#C9D3DF;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;color:#1A2B45;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1;line-height:1.9;letter-spacing:.02em}
+a{color:#1656A8}a:hover{color:#3F9FD8}
+img{max-width:100%}
+@keyframes shine{0%{transform:translateX(-160%) skewX(-18deg)}55%,100%{transform:translateX(460%) skewX(-18deg)}}
+
+/* セクション見出しの装飾バー（LPと共通） */
+.sec-h{position:relative;padding-bottom:15px}
+.sec-h::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:56px;height:3px;border-radius:2px;background:linear-gradient(90deg,#1656A8 0 42%,#BFE0F5 42% 100%)}
+
+/* 入力欄 ── font-sizeは16px固定（iOSで自動ズームさせないため） */
+.f-row{margin-bottom:22px}
+.f-label{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:13.5px;font-weight:700;color:#0B2455}
+.f-req{flex:none;background:#E7332C;color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:3px;line-height:1.6}
+.f-note{margin:6px 0 0;font-size:11px;color:#7E93AB;line-height:1.75}
+.f-input,.f-select{width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;color:#1A2B45;background:#fff;border:1px solid #D0DBE6;border-radius:6px;padding:13px 14px;line-height:1.5;-webkit-appearance:none;appearance:none}
+.f-input::placeholder{color:#A9B7C6}
+.f-input:focus,.f-select:focus{outline:none;border-color:#3F9FD8;box-shadow:0 0 0 3px rgba(63,159,216,.18)}
+.f-input:invalid:not(:placeholder-shown){border-color:#E7332C}
+/* 入力エラー時の表示 */
+.f-input.is-err{border-color:#E7332C;box-shadow:0 0 0 3px rgba(231,51,44,.14)}
+.f-err{display:flex;align-items:flex-start;gap:5px;margin:7px 0 0;font-size:11.5px;font-weight:700;color:#E7332C;line-height:1.7}
+.f-err::before{content:'！';flex:none;width:14px;height:14px;margin-top:2px;border-radius:50%;background:#E7332C;color:#fff;font-size:9px;font-weight:700;display:grid;place-items:center;line-height:1}
+.f-err[hidden]{display:none}
+.f-select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%235A6E85' stroke-width='1.8' d='M1 1.5L6 6.5l5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px;padding-right:38px}
+.f-select:required:invalid{color:#A9B7C6}
+
+/* 送信ボタン */
+.btn-shine{position:relative;overflow:hidden}
+.btn-shine::before{content:'';position:absolute;top:0;left:0;width:34%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-160%) skewX(-18deg);animation:shine 3s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.btn-shine::before{animation:none}}
+</style>
+</head>
+<body>
+
+<div style="position:relative;max-width:430px;margin:0 auto;background:#fff;overflow:hidden;box-shadow:0 0 40px rgba(11,36,85,.25);font-size:14px">
+
+  <header style="display:flex;align-items:center;padding:12px 20px;background:#0B2455">
+    <img src="imgs/Kaiketsu_logo-white.png" alt="カイケツエージェント" style="display:block;height:22px;width:auto">
+  </header>
+
+  <section style="background:linear-gradient(135deg,#3F9FD8,#1656A8);color:#fff;padding:38px 20px 34px;text-align:center">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.55);border-radius:4px;padding:5px 14px 4px;font-size:11.5px;font-weight:700;letter-spacing:.06em;margin-bottom:16px">入力はかんたん約1分</span>
+    <h1 style="margin:0;color:#fff;font-weight:700;font-size:20px;line-height:1.75">フォームを入力いただくと<br><em style="font-style:normal;color:#FFD400">キャリアアドバイザー</em>より<br>ご案内をさせていただきます</h1>
+  </section>
+
+  <section style="background:#fff;padding:38px 20px 44px">
+
+    <!-- ★送信先（フォーム処理のURL）をこの action に設定してください
+         あわせて、送信処理側の「完了後の遷移先（リダイレクト先）」に thanks.html を指定してください。
+         action が "#" のままの間は、動作確認用にJSで thanks.html へ遷移します（データは送信されません） -->
+    <form id="kk-form" action="#" method="post" novalidate>
+
+      <div class="f-row">
+        <label class="f-label" for="f-name">お名前<span class="f-req">必須</span></label>
+        <input class="f-input" type="text" id="f-name" name="name" autocomplete="name" required placeholder="山田 太郎">
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-email">メールアドレス<span class="f-req">必須</span></label>
+        <input class="f-input" type="email" id="f-email" name="email" autocomplete="email" inputmode="email" required placeholder="example@gmail.com">
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-tel">電話番号<span class="f-req">必須</span></label>
+        <input class="f-input" type="tel" id="f-tel" name="tel" autocomplete="tel" inputmode="numeric" maxlength="14" required placeholder="半角数字でご入力ください" aria-describedby="f-tel-note f-tel-err">
+        <p class="f-err" id="f-tel-err" role="alert" hidden></p>
+        <p class="f-note" id="f-tel-note">携帯電話は11桁、固定電話は市外局番からの10桁でご入力ください。ハイフンはあってもなくても構いません。</p>
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-age">年齢<span class="f-req">必須</span></label>
+        <select class="f-select" id="f-age" name="age" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="〜19歳">〜19歳</option>
+          <option value="20〜22歳">20〜22歳</option>
+          <option value="23〜25歳">23〜25歳</option>
+          <option value="26〜29歳">26〜29歳</option>
+          <option value="30歳以上">30歳以上</option>
+        </select>
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-interest">興味を持ったポイント<span class="f-req">必須</span></label>
+        <select class="f-select" id="f-interest" name="interest" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="高いインセンティブで年収を上げられそうだから">高いインセンティブで年収を上げられそうだから</option>
+          <option value="未経験からでも挑戦できるから">未経験からでも挑戦できるから</option>
+          <option value="電話営業・飛び込みがない（反響型の）営業スタイルだから">電話営業・飛び込みがない（反響型の）営業スタイルだから</option>
+          <option value="学歴・経歴不問で応募できるから">学歴・経歴不問で応募できるから</option>
+          <option value="残業が少ない・休日が多いなど働きやすそうだから">残業が少ない・休日が多いなど働きやすそうだから</option>
+          <option value="早く昇格・キャリアアップできそうだから">早く昇格・キャリアアップできそうだから</option>
+          <option value="将来性のある業界・企業で働きたいから">将来性のある業界・企業で働きたいから</option>
+          <option value="営業以外の職種（事務・人事・マーケなど）も見てみたいから">営業以外の職種（事務・人事・マーケなど）も見てみたいから</option>
+          <option value="非公開求人を紹介してほしいから">非公開求人を紹介してほしいから</option>
+          <option value="その他／まずは話を聞いてみたい">その他／まずは話を聞いてみたい</option>
+        </select>
+        <p class="f-note">もっとも当てはまるものを1つお選びください。</p>
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-timing">転職希望時期<span class="f-req">必須</span></label>
+        <select class="f-select" id="f-timing" name="timing" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="1ヶ月以内">1ヶ月以内（できるだけ早く）</option>
+          <option value="3ヶ月以内">3ヶ月以内</option>
+          <option value="6ヶ月以内">6ヶ月以内</option>
+          <option value="1年以内">1年以内</option>
+          <option value="時期は未定・情報収集中">時期は未定・まずは情報収集から</option>
+        </select>
+      </div>
+
+      <div class="f-row">
+        <label class="f-label" for="f-area">転職希望エリア<span class="f-req">必須</span></label>
+        <select class="f-select" id="f-area" name="area" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="北海道">北海道</option>
+          <option value="東北">東北（青森・岩手・宮城・秋田・山形・福島）</option>
+          <option value="関東">関東（東京・神奈川・千葉・埼玉・茨城・栃木・群馬）</option>
+          <option value="甲信越・北陸">甲信越・北陸（新潟・長野・山梨・富山・石川・福井）</option>
+          <option value="東海">東海（愛知・静岡・岐阜・三重）</option>
+          <option value="関西">関西（大阪・兵庫・京都・滋賀・奈良・和歌山）</option>
+          <option value="中国">中国（広島・岡山・山口・島根・鳥取）</option>
+          <option value="四国">四国（香川・愛媛・徳島・高知）</option>
+          <option value="九州・沖縄">九州・沖縄（福岡・熊本・鹿児島ほか）</option>
+          <option value="勤務地は問わない">勤務地は問わない</option>
+        </select>
+      </div>
+
+      <button class="btn-shine" type="submit" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;margin-top:30px;border:0;cursor:pointer;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;font-weight:900;font-size:16px;letter-spacing:.05em;padding:17px 20px;border-radius:6px;box-shadow:0 4px 14px rgba(6,20,50,.35)">無料で案内を受け取る
+        <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+      </button>
+
+      <p style="margin:14px 0 0;font-size:11px;color:#7E93AB;line-height:1.85;text-align:center">ご登録は無料です。送信をもって<a href="https://kai-ketsu.net/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a>に<br>ご同意いただいたものとみなします。</p>
+    </form>
+  </section>
+
+  <section style="background:#F5F8FB;padding:34px 20px">
+    <h2 class="sec-h" style="margin:0;font-weight:700;font-size:18px;line-height:1.6;text-align:center;color:#0B2455">ご登録後の流れ</h2>
+    <p style="margin:18px 0 0;font-size:12.5px;color:#3E5670;line-height:2;text-align:center">ご入力いただいた内容をもとに、<br>キャリアアドバイザーよりご連絡いたします。<br>面談日程はご都合の良い日時をお選びいただけます。</p>
+  </section>
+
+  <footer style="background:#0B2455;color:#fff;padding:28px 20px calc(28px + env(safe-area-inset-bottom))">
+    <img src="imgs/Kaiketsu_logo-white.png" alt="カイケツエージェント" style="display:block;height:26px;width:auto;margin-bottom:18px">
+    <nav style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:16px">
+      <a href="https://kai-ketsu.net/company/" target="_blank" rel="noopener" style="font-size:11.5px;font-weight:700;letter-spacing:.02em;color:#DCEBF8;text-decoration:none;border-bottom:1px solid rgba(220,235,248,.4);padding-bottom:2px">運営会社</a>
+      <a href="https://kai-ketsu.net/privacypolicy/" target="_blank" rel="noopener" style="font-size:11.5px;font-weight:700;letter-spacing:.02em;color:#DCEBF8;text-decoration:none;border-bottom:1px solid rgba(220,235,248,.4);padding-bottom:2px">プライバシーポリシー</a>
+    </nav>
+    <p style="margin:0 0 6px;font-size:10.5px;color:#A9BFD8;line-height:1.9">有料職業紹介事業（13-ユ-316494）</p>
+    <p style="margin:0;font-size:10.5px;color:#A9BFD8;line-height:1.9">© 2026 Kaiketsu.inc All Rights Reserved.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var THANKS_URL = 'thanks.html'; // 送信完了後に表示するサンクスページ
+  var form = document.getElementById('kk-form');
+  if (!form) return;
+
+  /* ===== 電話番号チェック ===== */
+  var tel = document.getElementById('f-tel');
+  var telErr = document.getElementById('f-tel-err');
+
+  // 全角数字→半角、ハイフン・カッコ・空白は取り除いて数字だけにする
+  function normalizeTel(value) {
+    return String(value)
+      .replace(/[０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
+      .replace(/[-‐‑‒–—―ー−ｰ()（）\s]/g, '');
+  }
+
+  // 同じ数字の繰り返し（例：00000000）
+  function isSameDigits(s) { return /^(\d)\1+$/.test(s); }
+
+  // 連番（例：12345678／87654321）
+  function isSerial(s) {
+    var up = true, down = true;
+    for (var i = 1; i < s.length; i++) {
+      var diff = s.charCodeAt(i) - s.charCodeAt(i - 1);
+      if (diff !== 1) up = false;
+      if (diff !== -1) down = false;
+    }
+    return up || down;
+  }
+
+  // 問題があればエラー文言を返す。問題なければ空文字。
+  function telError(raw) {
+    var v = normalizeTel(raw);
+    if (!v) return '電話番号をご入力ください。';
+    if (!/^\d+$/.test(v)) return '数字とハイフンのみでご入力ください。';
+    if (v.charAt(0) !== '0') return '0からはじまる電話番号をご入力ください。';
+    if (v.length < 10) return '桁数が足りません。もう一度ご確認のうえ、ご入力ください。';
+    if (v.length > 11) return '桁数が多すぎます。もう一度ご確認のうえ、ご入力ください。';
+    // 09000000000・00000000000・09012345678 のような、実在しないダミー番号を弾く
+    var sub = v.slice(-8); // 市外局番・事業者番号を除いた加入者番号部分
+    if (isSameDigits(v) || isSameDigits(sub) || isSerial(sub)) {
+      return '正しい電話番号をご入力ください。ご連絡がつく番号のご入力をお願いします。';
+    }
+    if (v.length === 11 && !/^(0[789]0|050)\d{8}$/.test(v)) {
+      return '11桁の場合は070・080・090・050からはじまる番号をご入力ください。';
+    }
+    if (v.length === 10 && /^(0[789]0|050)/.test(v)) {
+      return '携帯電話・IP電話の番号は11桁です。もう一度ご確認のうえ、ご入力ください。';
+    }
+    if (v.length === 10 && !/^0[1-9]\d{8}$/.test(v)) {
+      return '正しい電話番号をご入力ください。（固定電話は市外局番からの10桁）';
+    }
+    return '';
+  }
+
+  function showTelError(msg) {
+    tel.setCustomValidity(msg);
+    if (msg) {
+      telErr.textContent = msg;
+      telErr.hidden = false;
+      tel.classList.add('is-err');
+    } else {
+      telErr.textContent = '';
+      telErr.hidden = true;
+      tel.classList.remove('is-err');
+    }
+  }
+
+  if (tel) {
+    // 入力中はエラー表示を消し、入力欄から離れた時点で再チェックする
+    tel.addEventListener('input', function () { showTelError(''); });
+    tel.addEventListener('blur', function () {
+      if (!tel.value) { showTelError(''); return; }
+      var msg = telError(tel.value);
+      showTelError(msg);
+      if (!msg) tel.value = normalizeTel(tel.value); // 送信時の表記を半角数字に統一
+    });
+  }
+
+  form.addEventListener('submit', function (e) {
+    // 電話番号は送信前にもう一度チェックし、不正なら再入力を促す
+    if (tel) {
+      var msg = telError(tel.value);
+      showTelError(msg);
+      if (msg) {
+        e.preventDefault();
+        tel.focus();
+        tel.reportValidity();
+        return;
+      }
+      tel.value = normalizeTel(tel.value);
+    }
+
+    // 未入力・形式エラーがあれば、ブラウザ標準のエラー表示に任せる
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      form.reportValidity();
+      return;
+    }
+    // 送信先が未設定の間は、動作確認用にサンクスページへ遷移する
+    // ※本番公開前に、必ず form の action へ送信先URLを設定してください
+    if (form.getAttribute('action') === '#') {
+      e.preventDefault();
+      console.warn('[要対応] フォームの送信先が未設定です。form.html の action に送信先URLを設定してください。現在は動作確認用に thanks.html へ遷移しています。');
+      window.location.href = THANKS_URL;
+    }
+  });
+})();
+</script>
+</body>
+</html>

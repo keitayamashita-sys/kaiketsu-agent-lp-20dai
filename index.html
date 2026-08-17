@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>カイケツエージェント｜20代の転職支援</title>
+<meta name="description" content="20代・年収300万円から手取り10万円UPを目指す転職支援。未経験歓迎の好条件求人を専門アドバイザーがご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#C9D3DF;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;color:#1A2B45;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1;line-height:1.9;letter-spacing:.02em}
+a{color:#1656A8}a:hover{color:#3F9FD8}
+img{max-width:100%}
+@keyframes shine{0%{transform:translateX(-160%) skewX(-18deg)}55%,100%{transform:translateX(460%) skewX(-18deg)}}
+.rail::-webkit-scrollbar{display:none}
+
+/* セクション見出しの装飾バー */
+.sec-h{position:relative;padding-bottom:15px}
+.sec-h::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:56px;height:3px;border-radius:2px;background:linear-gradient(90deg,#1656A8 0 42%,#BFE0F5 42% 100%)}
+.sec-h-d::after{background:linear-gradient(90deg,#5BC2F0 0 42%,rgba(91,194,240,.3) 42% 100%)}
+
+/* FVスライドショー */
+.fv-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.fv-slide.is-on{opacity:1}
+.fv-dot{width:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.4);transition:background .4s}
+.fv-dot.is-on{background:#FFD400}
+
+/* 追従CTA */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #D7E0EA;transform:translateY(120%);transition:transform .3s ease;box-shadow:0 -6px 20px rgba(11,36,85,.12)}
+.sticky-cta.is-on{transform:translateY(0)}
+
+/* CTAボタンの光沢アニメーション */
+.btn-shine{position:relative;overflow:hidden}
+.btn-shine::before{content:'';position:absolute;top:0;left:0;width:34%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-160%) skewX(-18deg);animation:shine 3s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.btn-shine::before{animation:none}.fv-slide{transition:none}}
+</style>
+</head>
+<body>
+
+<div style="position:relative;max-width:430px;margin:0 auto;background:#fff;overflow:hidden;box-shadow:0 0 40px rgba(11,36,85,.25);font-size:14px">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 20px;background:#0B2455">
+    <img src="imgs/Kaiketsu_logo-white.png" alt="カイケツエージェント" style="display:block;height:22px;width:auto;flex:none">
+    <!-- ★フォームURL（1/4） -->
+    <a href="form.html" style="flex:none;display:flex;align-items:center;gap:5px;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;font-weight:900;font-size:11.5px;letter-spacing:.02em;white-space:nowrap;padding:9px 12px;border-radius:5px;box-shadow:0 2px 8px rgba(0,0,0,.25)">まずは案内を受け取る
+      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:8px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+    </a>
+  </header>
+
+  <section id="kk-fv">
+    <div style="position:relative;height:430px;overflow:hidden">
+      <div class="fv-slide is-on"><img src="imgs/room.png" alt="理想の暮らし（家）" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div class="fv-slide"><img src="imgs/travel.png" alt="理想の暮らし（旅行）" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div class="fv-slide"><img src="imgs/shopping.png" alt="理想の暮らし（買い物）" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:absolute;inset:0;background:rgba(255,255,255,.16)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,36,85,.28) 0%,rgba(11,36,85,.45) 45%,rgba(11,36,85,.82) 100%)"></div>
+      <div style="position:absolute;right:14px;top:14px;display:flex;gap:5px">
+        <span class="fv-dot is-on"></span>
+        <span class="fv-dot"></span>
+        <span class="fv-dot"></span>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;padding:0 20px 28px;color:#fff">
+        <h1 style="margin:0 0 14px;font-weight:900;line-height:1.4;font-size:33px;letter-spacing:.01em;text-shadow:0 2px 10px rgba(6,20,50,.55)">手取り<em style="font-style:normal;font-family:'Oswald',sans-serif;font-weight:700;font-size:58px;line-height:1;letter-spacing:0;color:#FFD400;margin:0 3px">10</em><b style="color:#FFD400;font-size:33px">万円UP</b><br>理想の生活を手に！</h1>
+        <p style="margin:0;font-size:14.5px;font-weight:500;line-height:1.85;color:#E3EEF9;text-shadow:0 1px 6px rgba(6,20,50,.5)">実家を出たい。毎月の支払いを気にせず遊びたい。<br><b style="color:#fff;font-weight:700">いまの年収のままでは難しいことも、変えられます。</b></p>
+      </div>
+    </div>
+    <div style="background:linear-gradient(90deg,#3F9FD8,#1656A8);padding:16px 20px 18px;text-align:center">
+      <!-- ★フォームURL（2/4） -->
+      <a class="btn-shine" href="form.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:100%;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;padding:11px 20px 13px;border-radius:6px;box-shadow:0 4px 14px rgba(6,20,50,.35)">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(11,36,85,.72)">年収400万円以上の求人多数</span>
+        <span style="display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:16px;letter-spacing:.05em">まずは案内を受け取る
+          <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+        </span>
+      </a>
+      <p style="margin:9px 0 0;font-size:11px;color:#DCEBF8;letter-spacing:.06em;text-align:center">ご相談・ご登録は無料です</p>
+    </div>
+  </section>
+
+  <section style="background:#F5F8FB;padding:50px 20px">
+    <h2 class="sec-h" style="margin:0;font-weight:700;font-size:22px;line-height:1.55;text-align:center;color:#0B2455">20代・<span style="background:linear-gradient(transparent 62%,#CFEBFB 62%)">年収300万円</span>のあなた</h2>
+    <p style="margin:15px 0 20px;text-align:center;font-size:15px;font-weight:700;color:#33475F">こんなお悩みありませんか？</p>
+    <div style="display:grid;gap:10px">
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:16px;font-weight:700;font-size:15.5px;line-height:1.55;color:#0B2455">
+        <span style="flex:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4FB8EE,#1656A8);color:#fff;display:grid;place-items:center;font-family:'Oswald',sans-serif;font-size:12px;font-weight:600">1</span>
+        <span style="background:linear-gradient(transparent 58%,#FFE14D 58%)">いつまでも実家から出れない</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:16px;font-weight:700;font-size:15.5px;line-height:1.55;color:#0B2455">
+        <span style="flex:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4FB8EE,#1656A8);color:#fff;display:grid;place-items:center;font-family:'Oswald',sans-serif;font-size:12px;font-weight:600">2</span>
+        <span style="background:linear-gradient(transparent 58%,#FFE14D 58%)">クレカの支払いが毎月不安</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:16px;font-weight:700;font-size:15.5px;line-height:1.55;color:#0B2455">
+        <span style="flex:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4FB8EE,#1656A8);color:#fff;display:grid;place-items:center;font-family:'Oswald',sans-serif;font-size:12px;font-weight:600">3</span>
+        <span style="background:linear-gradient(transparent 58%,#FFE14D 58%)">お金を気にして、遊べない</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0B2455;color:#fff;padding:26px 20px 46px">
+    <div style="position:relative;height:220px;border-radius:8px;overflow:hidden;background:#16305C">
+      <img src="imgs/room.png" alt="家賃10〜15万円の物件イメージ" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      <span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.48));z-index:1"></span>
+      <span style="position:absolute;left:10%;right:10%;top:50%;height:3px;background:#E7332C;transform:rotate(24deg);border-radius:2px;z-index:2"></span>
+      <span style="position:absolute;left:10%;right:10%;top:50%;height:3px;background:#E7332C;transform:rotate(-24deg);border-radius:2px;z-index:2"></span>
+      <span style="position:absolute;right:12px;top:14px;background:#fff;color:#0B2455;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:7px 12px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.2);white-space:nowrap;line-height:1.4;display:flex;align-items:baseline;z-index:3">東京家賃相場<b style="font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;margin:0 3px;color:#E7332C">10〜15</b>万円</span>
+    </div>
+    <div style="padding-top:28px;text-align:center">
+      <h2 class="sec-h sec-h-d" style="margin:0;color:#fff;font-weight:700;font-size:22px;line-height:1.75">理想の生活どころか<br><em style="font-style:normal;color:#5BC2F0;border-bottom:2px solid #5BC2F0;padding-bottom:2px">1人暮らしすら難しい</em>時代。</h2>
+      <p style="margin:16px 0 0;font-size:13px;color:#A9BFD8;line-height:2;text-align:left">手取り20万円から家賃を引くと、残るのは生活費でほとんど消えていきます。<br>節約や努力が足りないわけではありません。そもそもの収入が、いまの暮らしに追いついていないだけです。</p>
+    </div>
+  </section>
+
+  <section style="background:#fff;padding:50px 20px">
+    <h2 class="sec-h" style="margin:0;font-weight:700;font-size:22px;line-height:1.6;text-align:center;color:#0B2455"><span style="background:linear-gradient(transparent 62%,#CFEBFB 62%)">手取り10万円UP</span>の<br>好条件求人をご紹介</h2>
+    <p style="margin:16px 0 0;font-size:13px;color:#5A6E85;line-height:1.95">同じ支出でも、手取りが10万円変われば、<br>1か月に自由に使える金額はこれだけ差がつきます。</p>
+
+    <div style="margin-top:24px;background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:22px 16px 20px">
+      <div style="position:relative;padding-left:34px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+          <div style="font-size:10.5px;color:#5A6E85;line-height:1.5">現在（年収300万円）<b style="display:block;font-size:12.5px;color:#0B2455;font-weight:900;margin-top:2px">手取り <span style="font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;margin:0 1px">20</span>万円</b></div>
+          <div style="font-size:10.5px;color:#5A6E85;line-height:1.5">カイケツ転職後（年収450万円）<b style="display:block;font-size:12.5px;color:#0B2455;font-weight:900;margin-top:2px">手取り <span style="font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;margin:0 1px;color:#1656A8">30</span>万円</b></div>
+        </div>
+        <div style="position:relative;height:330px">
+          <div style="position:absolute;left:-34px;right:0;height:1px;background:#DCE4EC;bottom:330px"><em style="position:absolute;left:0;bottom:3px;font-style:normal;font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:600;color:#9AA9B9">30万</em></div>
+          <div style="position:absolute;left:-34px;right:0;height:1px;background:#DCE4EC;bottom:220px"><em style="position:absolute;left:0;bottom:3px;font-style:normal;font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:600;color:#9AA9B9">20万</em></div>
+          <div style="position:absolute;left:-34px;right:0;height:1px;background:#DCE4EC;bottom:110px"><em style="position:absolute;left:0;bottom:3px;font-style:normal;font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:600;color:#9AA9B9">10万</em></div>
+          <div style="position:absolute;left:-34px;right:0;height:2px;background:#0B2455;bottom:0;z-index:3"><em style="position:absolute;left:0;bottom:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:600;color:#9AA9B9">0</em></div>
+          <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end">
+            <div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%">
+              <div style="height:22px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#4FB8EE,#1656A8);color:#fff;font-weight:700;font-size:10px;border-radius:4px 4px 0 0"><span style="padding:0 3px">使える 2万</span></div>
+              <div style="height:33px;display:flex;align-items:center;justify-content:center;background:#E2E8EF;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">貯金 3万</span></div>
+              <div style="height:22px;display:flex;align-items:center;justify-content:center;background:#D3DBE4;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">光熱・通信 2万</span></div>
+              <div style="height:55px;display:flex;align-items:center;justify-content:center;background:#E2E8EF;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">生活費 5万</span></div>
+              <div style="height:88px;display:flex;align-items:center;justify-content:center;background:#D3DBE4;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">家賃 8万</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%">
+              <div style="height:132px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#4FB8EE,#1656A8);color:#fff;font-weight:900;font-size:11px;border-radius:4px 4px 0 0;box-shadow:0 -2px 10px rgba(63,159,216,.35)"><span style="padding:0 3px">使える 12万</span></div>
+              <div style="height:33px;display:flex;align-items:center;justify-content:center;background:#E2E8EF;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">貯金 3万</span></div>
+              <div style="height:22px;display:flex;align-items:center;justify-content:center;background:#D3DBE4;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">光熱・通信 2万</span></div>
+              <div style="height:55px;display:flex;align-items:center;justify-content:center;background:#E2E8EF;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">生活費 5万</span></div>
+              <div style="height:88px;display:flex;align-items:center;justify-content:center;background:#D3DBE4;color:#41556C;font-size:9.5px;border-top:1px solid rgba(11,36,85,.12)"><span style="padding:0 3px">家賃 8万</span></div>
+            </div>
+          </div>
+          <div style="position:absolute;z-index:5;left:50%;transform:translateX(-50%);bottom:228px;background:#FFD400;color:#0B2455;padding:5px 14px;border-radius:999px;font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;box-shadow:0 4px 12px rgba(11,36,85,.25)">6<i style="font-style:normal;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:900;margin-left:2px">倍</i></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:18px;margin-top:16px;padding-top:12px;border-top:1px solid #E1E9F2;font-size:10.5px;color:#5A6E85;letter-spacing:.02em">
+        <span><i style="display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;border-radius:2px;background:linear-gradient(180deg,#4FB8EE,#1656A8)"></i>自由に使える金額</span>
+        <span><i style="display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;border-radius:2px;background:#D3DBE4"></i>毎月かかる費用</span>
+      </div>
+    </div>
+    <p style="margin:10px 0 0;font-size:10.5px;color:#8B9AAB;line-height:1.75">※ 家賃・生活費・貯金額を同額とした場合の試算です。手取り額は年収・扶養等により変動します。</p>
+  </section>
+
+  <section style="background:#F5F8FB;padding:50px 20px">
+    <h2 class="sec-h" style="margin:0;font-weight:700;font-size:22px;line-height:1.6;text-align:center;color:#0B2455"><span style="background:linear-gradient(transparent 62%,#CFEBFB 62%)">10年以上</span>続けてきた<br>カイケツ転職のポイント</h2>
+    <div style="display:grid;gap:16px;margin-top:22px">
+      <div style="background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:26px 20px;text-align:center">
+        <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.14em;color:#3F9FD8">ポイント①</p>
+        <h3 style="margin:0 0 10px;font-weight:700;font-size:18px;line-height:1.55;color:#0B2455">転職サイトにない好条件求人</h3>
+        <p style="margin:0;font-size:13.5px;color:#3E5670;line-height:2;text-align:left">10年以上、企業と直接やりとりを続けてきたからこそ、転職サイトには出てこない年収の高い求人を紹介できます。</p>
+        <div style="position:relative;margin-top:16px;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/meeting.png" alt="企業との商談風景" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+      <div style="background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:26px 20px;text-align:center">
+        <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.14em;color:#3F9FD8">ポイント②</p>
+        <h3 style="margin:0 0 10px;font-weight:700;font-size:18px;line-height:1.55;color:#0B2455">10,000件以上の求人から選べる</h3>
+        <p style="margin:0;font-size:13.5px;color:#3E5670;line-height:2;text-align:left">営業・マーケター・人事など、20種類以上の職種を保有。<br>やりたい仕事を、選択肢の中から選べます。</p>
+        <div style="position:relative;margin-top:16px;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/interview.png" alt="求人検索・面談の様子" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+      <div style="background:#fff;border:1px solid #E1E9F2;border-radius:8px;padding:26px 20px;text-align:center">
+        <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.14em;color:#3F9FD8">ポイント③</p>
+        <h3 style="margin:0 0 10px;font-weight:700;font-size:18px;line-height:1.55;color:#0B2455">未経験でも年収400万円以上目指せる</h3>
+        <p style="margin:0;font-size:13.5px;color:#3E5670;line-height:2;text-align:left">学歴・資格・職歴を問わない求人をご紹介。<br>未経験でも、今の年収から100万円以上の収入アップを目指せます。</p>
+        <div style="position:relative;margin-top:16px;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/working.png" alt="新しい職場で働く20代" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0B2455;color:#fff;padding:50px 0">
+    <div style="padding:0 20px">
+      <h2 class="sec-h sec-h-d" style="margin:0;color:#fff;font-weight:700;font-size:22px;line-height:1.6;text-align:center">未経験から、<br><em style="font-style:normal;color:#5BC2F0">年収は変えられる。</em></h2>
+      <p style="margin:15px 0 0;font-size:13px;color:#A9BFD8;text-align:center">実際にご利用いただいた20代の方の事例です。</p>
+    </div>
+    <div class="rail" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 20px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <article style="scroll-snap-align:center;flex:none;width:256px;background:#fff;color:#1A2B45;border-radius:8px;overflow:hidden">
+        <div style="padding:22px 16px 20px">
+          <div style="display:flex;flex-direction:column;align-items:center;margin:0 0 16px">
+            <img src="imgs/avatar-1.png" alt="20代後半・男性" loading="lazy" style="width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;background:#EAF1F8">
+            <p style="margin:10px 0 0;font-size:10.5px;letter-spacing:.1em;color:#5A6E85;font-weight:700">20代後半・男性</p>
+          </div>
+          <div style="background:#F0F6FB;border-radius:6px;padding:10px 12px;font-size:12.5px;line-height:1.7">
+            <div style="color:#5A6E85">転職前　飲食店員</div>
+            <div style="font-weight:700;font-size:14px;color:#0B2455">転職後　住宅設備の営業員</div>
+          </div>
+          <p style="display:flex;align-items:baseline;gap:4px;margin:14px 0 10px;font-weight:900;font-size:12.5px;color:#0B2455">年収 <span style="font-family:'Oswald',sans-serif;font-size:30px;font-weight:700;line-height:.9;color:#1656A8">250</span>万円UP</p>
+          <p style="margin:0;font-size:13px;line-height:1.9;color:#33475F">未経験でも高月給からスタートできる点が魅力的でした</p>
+        </div>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:256px;background:#fff;color:#1A2B45;border-radius:8px;overflow:hidden">
+        <div style="padding:22px 16px 20px">
+          <div style="display:flex;flex-direction:column;align-items:center;margin:0 0 16px">
+            <img src="imgs/avatar-2.png" alt="20代後半・男性" loading="lazy" style="width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;background:#EAF1F8">
+            <p style="margin:10px 0 0;font-size:10.5px;letter-spacing:.1em;color:#5A6E85;font-weight:700">20代後半・男性</p>
+          </div>
+          <div style="background:#F0F6FB;border-radius:6px;padding:10px 12px;font-size:12.5px;line-height:1.7">
+            <div style="color:#5A6E85">転職前　職人／現場作業員</div>
+            <div style="font-weight:700;font-size:14px;color:#0B2455">転職後　店舗販売スタッフ</div>
+          </div>
+          <p style="display:flex;align-items:baseline;gap:4px;margin:14px 0 10px;font-weight:900;font-size:12.5px;color:#0B2455">年収 <span style="font-family:'Oswald',sans-serif;font-size:30px;font-weight:700;line-height:.9;color:#1656A8">100</span>万円UP</p>
+          <p style="margin:0;font-size:13px;line-height:1.9;color:#33475F">自分ひとりでは書類も面接も通らず、困っていました</p>
+        </div>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:256px;background:#fff;color:#1A2B45;border-radius:8px;overflow:hidden">
+        <div style="padding:22px 16px 20px">
+          <div style="display:flex;flex-direction:column;align-items:center;margin:0 0 16px">
+            <img src="imgs/avatar-3.png" alt="20代前半・女性" loading="lazy" style="width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;background:#EAF1F8">
+            <p style="margin:10px 0 0;font-size:10.5px;letter-spacing:.1em;color:#5A6E85;font-weight:700">20代前半・女性</p>
+          </div>
+          <div style="background:#F0F6FB;border-radius:6px;padding:10px 12px;font-size:12.5px;line-height:1.7">
+            <div style="color:#5A6E85">転職前　一般事務スタッフ</div>
+            <div style="font-weight:700;font-size:14px;color:#0B2455">転職後　採用人事スタッフ</div>
+          </div>
+          <p style="display:flex;align-items:baseline;gap:4px;margin:14px 0 10px;font-weight:900;font-size:12.5px;color:#0B2455">年収 <span style="font-family:'Oswald',sans-serif;font-size:30px;font-weight:700;line-height:.9;color:#1656A8">100</span>万円UP</p>
+          <p style="margin:0;font-size:13px;line-height:1.9;color:#33475F">自分では知ることのできない求人をいくつもご提案いただきました</p>
+        </div>
+      </article>
+    </div>
+    <p style="display:flex;align-items:center;gap:8px;padding:14px 20px 0;margin:0;font-size:10.5px;letter-spacing:.04em;color:#8FA6C0"><i style="display:block;width:26px;height:1px;background:currentColor"></i>横にスワイプできます</p>
+  </section>
+
+  <section style="background:#fff;padding:50px 0">
+    <div style="padding:0 20px">
+      <h2 class="sec-h" style="margin:0;font-weight:700;font-size:22px;line-height:1.6;text-align:center;color:#0B2455">専門のアドバイザーが<br><span style="background:linear-gradient(transparent 62%,#CFEBFB 62%)">「活躍できる場所」</span>を<br>ご紹介します</h2>
+    </div>
+    <div class="rail" style="display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 20px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/satooka.jpg" alt="里岡 龍太郎" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">里岡 龍太郎</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">過去に捉われず、5年、10年先の未来を一緒に本気で作りに行く最強のパートナーでありたいと思っています。</p>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/nishida.jpg" alt="西田 園" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">西田 園</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">企業様と同じ目線で採用に向き合い、採用をゴールとせず、入社後の活躍へと続く確かなご縁をつなぎます。</p>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/takahashi.jpg" alt="高橋 渉" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">高橋 渉</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">企業の本音や現場のリアルを聞き出す“採用攻略オタク”として全力で伴走します。</p>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/adachi.jpg" alt="足立 小夏" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">足立 小夏</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">転職を「ゴール」ではなく新たな「スタート」と考え、最後まであなたに寄り添います。</p>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/yoshimoto.jpg" alt="吉本 歩夢" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">吉本 歩夢</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">信頼は、結果の積み重ねでしか築けないと思っています。ご紹介する一人ひとりに責任を持ち、求職者様の本音をフラットにお伝えすることで、信頼頂けるパートナーでありたいと思っています。</p>
+      </article>
+      <article style="scroll-snap-align:center;flex:none;width:228px">
+        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/hoshi.jpg" alt="星 涼太" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">星 涼太</p>
+        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
+        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">なんとなくで終わらせない。スキルは【資産】です！未経験からでも強いスキルを身につけるお手伝いをさせてください！</p>
+      </article>
+    </div>
+    <p style="display:flex;align-items:center;gap:8px;padding:14px 20px 0;margin:0;font-size:10.5px;letter-spacing:.04em;color:#7E93AB"><i style="display:block;width:26px;height:1px;background:currentColor"></i>横にスワイプできます</p>
+  </section>
+
+  <section style="background:linear-gradient(135deg,#3F9FD8,#1656A8);color:#fff;padding:48px 20px;text-align:center">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.55);border-radius:4px;padding:5px 14px 4px;font-size:11.5px;font-weight:700;letter-spacing:.06em;margin-bottom:18px">年収400万円以上の求人多数</span>
+    <h2 style="margin:0 0 8px;color:#fff;font-weight:700;font-size:24px;line-height:1.6"><em style="font-style:normal;color:#FFD400">手取り10万円UP</em>で<br>理想の生活を<br>手にしませんか？</h2>
+    <p style="margin:16px 0 22px;font-size:13px;color:#DCEBF8;line-height:1.95">フォームのご入力は約1分。<br>キャリアアドバイザーよりご案内いたします。</p>
+    <!-- ★フォームURL（3/4） -->
+    <a class="btn-shine" href="form.html" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;font-weight:900;font-size:16px;letter-spacing:.05em;padding:16px 20px;border-radius:6px;box-shadow:0 4px 14px rgba(6,20,50,.35)">まずは案内を受け取る
+      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+    </a>
+  </section>
+
+  <footer style="background:#0B2455;color:#fff;padding:28px 20px calc(132px + env(safe-area-inset-bottom))">
+    <img src="imgs/Kaiketsu_logo-white.png" alt="カイケツエージェント" style="display:block;height:26px;width:auto;margin-bottom:18px">
+    <nav style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:16px">
+      <a href="https://kai-ketsu.net/company/" target="_blank" rel="noopener" style="font-size:11.5px;font-weight:700;letter-spacing:.02em;color:#DCEBF8;text-decoration:none;border-bottom:1px solid rgba(220,235,248,.4);padding-bottom:2px">運営会社</a>
+      <a href="https://kai-ketsu.net/privacypolicy/" target="_blank" rel="noopener" style="font-size:11.5px;font-weight:700;letter-spacing:.02em;color:#DCEBF8;text-decoration:none;border-bottom:1px solid rgba(220,235,248,.4);padding-bottom:2px">プライバシーポリシー</a>
+    </nav>
+    <p style="margin:0 0 6px;font-size:10.5px;color:#A9BFD8;line-height:1.9">有料職業紹介事業（13-ユ-316494）</p>
+    <p style="margin:0;font-size:10.5px;color:#A9BFD8;line-height:1.9">© 2026 Kaiketsu.inc All Rights Reserved.</p>
+  </footer>
+</div>
+
+<div class="sticky-cta" id="kk-sticky">
+  <!-- ★フォームURL（4/4） -->
+  <a class="btn-shine" href="form.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:100%;max-width:406px;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;padding:9px 20px 11px;border-radius:6px;box-shadow:0 4px 12px rgba(11,36,85,.2)">
+    <span style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(11,36,85,.72)">年収400万円以上の求人多数</span>
+    <span style="display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:16px;letter-spacing:.05em">まずは案内を受け取る
+      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+    </span>
+  </a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var SLIDE_INTERVAL = 4200; // FVスライドの切替間隔（ミリ秒）
+
+  // --- FVスライドショー ---
+  var slides = document.querySelectorAll('.fv-slide');
+  var dots = document.querySelectorAll('.fv-dot');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduce && slides.length > 1) {
+    var i = 0;
+    setInterval(function () {
+      i = (i + 1) % slides.length;
+      for (var n = 0; n < slides.length; n++) {
+        slides[n].classList.toggle('is-on', n === i);
+        if (dots[n]) dots[n].classList.toggle('is-on', n === i);
+      }
+    }, SLIDE_INTERVAL);
+  }
+
+  // --- 追従CTA（FVを過ぎたら表示） ---
+  var fv = document.getElementById('kk-fv');
+  var sticky = document.getElementById('kk-sticky');
+  if (fv && sticky) {
+    var check = function () {
+      sticky.classList.toggle('is-on', fv.getBoundingClientRect().bottom < 0);
+    };
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    check();
+  }
+})();
+</script>
+</body>
+</html>
