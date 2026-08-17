@@ -27,7 +27,7 @@ img{max-width:100%}
 .fv-dot.is-on{background:#FFD400}
 
 /* 追従CTA */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #D7E0EA;transform:translateY(120%);transition:transform .3s ease;box-shadow:0 -6px 20px rgba(11,36,85,.12)}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;padding:11px 12px calc(11px + env(safe-area-inset-bottom));background:#0B2455;border-top:1px solid rgba(255,255,255,.16);transform:translateY(120%);transition:transform .3s ease;box-shadow:0 -6px 20px rgba(11,36,85,.3)}
 .sticky-cta.is-on{transform:translateY(0)}
 
 /* CTAボタンの光沢アニメーション */
@@ -40,16 +40,13 @@ img{max-width:100%}
 
 <div style="position:relative;max-width:430px;margin:0 auto;background:#fff;overflow:hidden;box-shadow:0 0 40px rgba(11,36,85,.25);font-size:14px">
 
-  <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 20px;background:#0B2455">
+  <header style="display:flex;align-items:center;gap:12px;padding:13px 16px 13px 20px;background:#0B2455">
     <img src="imgs/Kaiketsu_logo-white.png" alt="カイケツエージェント" style="display:block;height:22px;width:auto;flex:none">
-    <!-- ★フォームURL（1/4） -->
-    <a href="form.html" style="flex:none;display:flex;align-items:center;gap:5px;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;font-weight:900;font-size:11.5px;letter-spacing:.02em;white-space:nowrap;padding:9px 12px;border-radius:5px;box-shadow:0 2px 8px rgba(0,0,0,.25)">まずは案内を受け取る
-      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:8px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
-    </a>
+    <p style="margin:0;padding-left:12px;border-left:1px solid rgba(255,255,255,.28);font-size:11.5px;font-weight:700;line-height:1.5;letter-spacing:.02em;color:#DCEBF8">20代専門の<br>転職エージェント</p>
   </header>
 
   <section id="kk-fv">
-    <div style="position:relative;height:430px;overflow:hidden">
+    <div style="position:relative;height:570px;overflow:hidden">
       <div class="fv-slide is-on"><img src="imgs/room.png" alt="理想の暮らし（家）" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       <div class="fv-slide"><img src="imgs/travel.png" alt="理想の暮らし（旅行）" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       <div class="fv-slide"><img src="imgs/shopping.png" alt="理想の暮らし（買い物）" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -64,16 +61,6 @@ img{max-width:100%}
         <h1 style="margin:0 0 14px;font-weight:900;line-height:1.4;font-size:33px;letter-spacing:.01em;text-shadow:0 2px 10px rgba(6,20,50,.55)">手取り<em style="font-style:normal;font-family:'Oswald',sans-serif;font-weight:700;font-size:58px;line-height:1;letter-spacing:0;color:#FFD400;margin:0 3px">10</em><b style="color:#FFD400;font-size:33px">万円UP</b><br>理想の生活を手に！</h1>
         <p style="margin:0;font-size:14.5px;font-weight:500;line-height:1.85;color:#E3EEF9;text-shadow:0 1px 6px rgba(6,20,50,.5)">実家を出たい。毎月の支払いを気にせず遊びたい。<br><b style="color:#fff;font-weight:700">いまの年収のままでは難しいことも、変えられます。</b></p>
       </div>
-    </div>
-    <div style="background:linear-gradient(90deg,#3F9FD8,#1656A8);padding:16px 20px 18px;text-align:center">
-      <!-- ★フォームURL（2/4） -->
-      <a class="btn-shine" href="form.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:100%;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;padding:11px 20px 13px;border-radius:6px;box-shadow:0 4px 14px rgba(6,20,50,.35)">
-        <span style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(11,36,85,.72)">年収400万円以上の求人多数</span>
-        <span style="display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:16px;letter-spacing:.05em">まずは案内を受け取る
-          <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
-        </span>
-      </a>
-      <p style="margin:9px 0 0;font-size:11px;color:#DCEBF8;letter-spacing:.06em;text-align:center">ご相談・ご登録は無料です</p>
     </div>
   </section>
 
@@ -257,18 +244,6 @@ img{max-width:100%}
         <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
         <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">転職を「ゴール」ではなく新たな「スタート」と考え、最後まであなたに寄り添います。</p>
       </article>
-      <article style="scroll-snap-align:center;flex:none;width:228px">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/yoshimoto.jpg" alt="吉本 歩夢" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">吉本 歩夢</p>
-        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
-        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">信頼は、結果の積み重ねでしか築けないと思っています。ご紹介する一人ひとりに責任を持ち、求職者様の本音をフラットにお伝えすることで、信頼頂けるパートナーでありたいと思っています。</p>
-      </article>
-      <article style="scroll-snap-align:center;flex:none;width:228px">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:#DCE6F0"><img src="imgs/hoshi.jpg" alt="星 涼太" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-        <p style="margin:14px 0 2px;font-weight:700;font-size:14px;color:#0B2455">星 涼太</p>
-        <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#3F9FD8">キャリアアドバイザー</p>
-        <p style="margin:0;font-size:12.5px;line-height:1.95;color:#3E5670">なんとなくで終わらせない。スキルは【資産】です！未経験からでも強いスキルを身につけるお手伝いをさせてください！</p>
-      </article>
     </div>
     <p style="display:flex;align-items:center;gap:8px;padding:14px 20px 0;margin:0;font-size:10.5px;letter-spacing:.04em;color:#7E93AB"><i style="display:block;width:26px;height:1px;background:currentColor"></i>横にスワイプできます</p>
   </section>
@@ -296,10 +271,10 @@ img{max-width:100%}
 
 <div class="sticky-cta" id="kk-sticky">
   <!-- ★フォームURL（4/4） -->
-  <a class="btn-shine" href="form.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:100%;max-width:406px;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;padding:9px 20px 11px;border-radius:6px;box-shadow:0 4px 12px rgba(11,36,85,.2)">
-    <span style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(11,36,85,.72)">年収400万円以上の求人多数</span>
-    <span style="display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:16px;letter-spacing:.05em">まずは案内を受け取る
-      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:10px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
+  <a class="btn-shine" href="form.html" style="display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;max-width:406px;box-sizing:border-box;text-decoration:none;background:linear-gradient(180deg,#FFE14D,#FFC400);color:#0B2455;font-family:inherit;padding:11px 20px 13px;border-radius:6px;box-shadow:0 4px 12px rgba(11,36,85,.2)">
+    <span style="font-size:12.5px;font-weight:700;letter-spacing:.06em;color:rgba(11,36,85,.75)">年収400万円以上の求人多数</span>
+    <span style="display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:.05em">まずは案内を受け取る
+      <svg viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="2" style="width:25px;height:11px;flex:none"><path d="M0 5.5h22M17 1l5 4.5-5 4.5"></path></svg>
     </span>
   </a>
 </div>
